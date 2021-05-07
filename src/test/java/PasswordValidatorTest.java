@@ -11,16 +11,16 @@ class PasswordValidatorTest {
     }
 
     @Test
-    public void hasANumberTest() {
+    public void hasNumberTest() {
 
-        assertFalse(PasswordValidator.hasANumber("noNumber"));
-        assertTrue(PasswordValidator.hasANumber("number42"));
+        assertFalse(PasswordValidator.hasNumber("noNumber"));
+        assertTrue(PasswordValidator.hasNumber("number42"));
     }
 
     @Test
-    public void hasALetterTest() {
-        assertFalse(PasswordValidator.hasALetter("556%!?"));
-        assertTrue(PasswordValidator.hasALetter("hasletter"));
+    public void hasLetterTest() {
+        assertFalse(PasswordValidator.hasLetter("556%!?"));
+        assertTrue(PasswordValidator.hasLetter("hasletter"));
     }
 
     @Test
@@ -35,5 +35,11 @@ class PasswordValidatorTest {
         assertTrue(PasswordValidator.isLongEnoughAdmin("plusde10char"));
     }
 
+    @Test
+    public void hasSpecCharTest() {
+
+        assertFalse(PasswordValidator.hasSpecChar("pasDeCharSpec"));
+        assertTrue(PasswordValidator.hasSpecChar("!specChar%;<"));
+    }
 
 }
