@@ -23,5 +23,9 @@ class PasswordValidatorTest {
         assertTrue(PasswordValidator.hasALetter("hasletter"));
     }
 
-
+    @Test
+    public void isValidTest() {
+        assertFalse(PasswordValidator.isValid("55"));
+        assertTrue(PasswordValidator.isValid("va1idPassw0rd"));
+    }
 }

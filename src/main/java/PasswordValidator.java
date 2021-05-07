@@ -25,4 +25,8 @@ public class PasswordValidator {
         }
         return false;
     }
+
+    public static boolean isValid(String pwd) {
+        return (isLongEnough(pwd)&&hasALetter(pwd)&&hasANumber(pwd));   //oui c'est moche
+    }
 }
