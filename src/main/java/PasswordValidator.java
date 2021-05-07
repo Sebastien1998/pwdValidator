@@ -16,4 +16,13 @@ public class PasswordValidator {
         }
         return false;
     }
+
+    public static boolean hasALetter(String pwd) {
+        for (int i = 0; i < pwd.length(); i++) {
+            if (Character.isAlphabetic(pwd.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

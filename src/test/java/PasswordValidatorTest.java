@@ -16,4 +16,12 @@ class PasswordValidatorTest {
         assertFalse(PasswordValidator.hasANumber("noNumber"));
         assertTrue(PasswordValidator.hasANumber("number42"));
     }
+
+    @Test
+    public void hasALetterTest() {
+        assertFalse(PasswordValidator.hasALetter("556%!?"));
+        assertTrue(PasswordValidator.hasALetter("hasletter"));
+    }
+
+
 }
