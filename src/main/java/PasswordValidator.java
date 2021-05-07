@@ -29,4 +29,11 @@ public class PasswordValidator {
     public static boolean isValid(String pwd) {
         return (isLongEnough(pwd)&&hasALetter(pwd)&&hasANumber(pwd));   //oui c'est moche
     }
+
+    public static boolean isLongEnoughAdmin(String pwd) {
+
+        boolean isLongerThan6;
+        isLongerThan6=pwd.length()>10;
+        return isLongerThan6;
+    }
 }

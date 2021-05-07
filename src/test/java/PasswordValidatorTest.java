@@ -28,4 +28,12 @@ class PasswordValidatorTest {
         assertFalse(PasswordValidator.isValid("55"));
         assertTrue(PasswordValidator.isValid("va1idPassw0rd"));
     }
+
+    @Test
+    public void isLongEnoughAdminTest() {
+        assertFalse(PasswordValidator.isLongEnoughAdmin("moin10"));
+        assertTrue(PasswordValidator.isLongEnoughAdmin("plusde10char"));
+    }
+
+
 }
